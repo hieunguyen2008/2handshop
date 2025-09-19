@@ -1,0 +1,288 @@
+* {
+    font-family: "Rubik", sans-serif;
+    font-weight: 450;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box 
+}
+
+
+/* Header */
+#Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: 	#F9F9F9;
+    box-shadow: 0px 5px 15px 	rgba(0,0,0,0.1);
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Header img {
+    width: 50px;
+    height: 50px;
+}
+
+#Navbar a {
+    padding: 0px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 150;
+    color: black;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#Navbar a:hover, #Navbar a.Highlight {
+    color: 	#66BB6A;
+}
+
+#Navbar a.Highlight::after, #Navbar a:hover::after {
+    content: "";
+    width: 30%;
+    height: 0.7px;
+    background-color:  #66BB6A;
+    position: absolute;
+    bottom: -2px;
+    left: 20px
+}
+
+#Main_menu_icon{
+    display: none;
+}
+
+#icon_pages {
+    display: none;
+}
+
+#close_menu {
+    display: none;
+}
+
+#replace_pages {
+    display: none;
+}
+
+
+/* Shop Page */
+
+#shop_banner {
+    background-image: url("https://cdn.pixabay.com/photo/2016/06/24/04/27/graffiti-1476637_1280.jpg");
+    width: 100%;
+    height: 45vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#shop_banner .dark_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+#shop_banner h2 {
+    color: white;
+    font-size: 2.7rem;
+    z-index: 1;
+    padding-top: 100px;
+}
+
+#shop_banner p {
+    color: white;
+    font-size: 0.8rem;
+    z-index: 1;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+#Cart {
+    padding: 50px 0px 40px 0px;
+    width: 90%;
+    margin-left: 55px;
+}
+
+#Cart table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#Cart table img {
+    width: 70px;
+    border-radius: 5px;
+}
+
+#Cart table thead {
+    border: 2px solid black;
+    border-left: none;
+    border-right: none;
+}
+
+#Cart table thead td {
+    padding-left: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#Cart table tbody .remove {
+    padding-left: 20px;
+    color: black;
+}
+
+#Cart table tbody .remove:hover {
+    color: red;
+}
+
+#Cart table tbody tr td {
+    padding-left: 70px;
+    padding-top: 10px;
+}
+
+#Cart table tbody td {
+    font-size: 0.83rem;
+    color: rgb(71, 70, 70);
+}
+
+
+/* Footer */
+
+.col1 img {
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    background-color:  #b9e7bb;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.col1 p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.col2 .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.col2 a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.col2 a:hover {
+    color: #0d9e14
+}
+
+.col3 .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.col3 a i {
+    color: black;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.col3 a i:hover {
+    color: #0d9e14;
+}
+
+
+/* Responsive Media Query */
+
+@media (max-width: 821px) {
+    #Navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #e9fbeb;
+    box-shadow: 0 40px 60px rgba(0,0,0,0.15);
+    padding: 80px 0px 0px 10px;
+    transition: 0.3s;
+    }
+
+    #Navbar.active {
+        right: 0px;
+    }
+
+    #Navbar a {
+        margin-bottom: 20px;
+    }
+
+    #Main_menu_icon {
+    display: flex;
+    align-items: center;
+    }
+
+    #close_menu {
+        display: initial;
+        bottom: 20px;
+    }
+
+    #replace_pages {
+        display: initial;
+    }
+
+    #replace_icons {
+        display: none;
+    }
+
+    #Header_intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 92vh;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(243, 243, 243, 0.4) 60%, rgba(76, 175, 80, 0.1) 100%);
+    }
+
+    #Header_intro div h2 {
+    padding: 0px 2px 0px 2px;
+    }
+
+}
