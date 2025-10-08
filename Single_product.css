@@ -1,0 +1,397 @@
+* {
+    font-family: "Rubik", sans-serif;
+    font-weight: 450;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box 
+}
+
+
+/* Header */
+#Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: 	#F9F9F9;
+    box-shadow: 0px 5px 15px 	rgba(0,0,0,0.1);
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Header img {
+    width: 50px;
+    height: 50px;
+}
+
+#Navbar a {
+    padding: 0px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 150;
+    color: black;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#Navbar a:hover, #Navbar a.Highlight {
+    color: 	#66BB6A;
+}
+
+#Navbar a.Highlight::after, #Navbar a:hover::after {
+    content: "";
+    width: 30%;
+    height: 0.7px;
+    background-color:  #66BB6A;
+    position: absolute;
+    bottom: -2px;
+    left: 20px
+}
+
+#Main_menu_icon{
+    display: none;
+}
+
+#icon_pages {
+    display: none;
+}
+
+#close_menu {
+    display: none;
+}
+
+#replace_pages {
+    display: none;
+}
+
+
+/* Website Body */
+
+#Product_details {
+    display: flex;
+    margin-top: 70px;
+}
+
+#Product_details .product_image {
+    width: 35%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.small_image_group {
+    display: flex;
+    gap: 8px;
+}
+
+.small_images {
+    flex-basis: 24%;
+    cursor: pointer;
+    padding-top: 10px;
+    
+}
+
+#Product_details .details {
+    width: 40%;
+    padding-top: 30px;
+}
+
+#Product_details .details h4 {
+    padding: 40px 0px 20px 0px;
+}
+
+#Product_details .details h2 {
+    padding: 30px 0px 20px 0px;
+    font-size: 1.5rem;
+}
+
+#Product_details .details h3 {
+    padding: 30px 0px 20px 0px;
+    font-size: 1.3rem;
+}
+
+#Product_details .details button {
+    background-color: #4CAF50;
+    padding: 8px 20px;
+    margin-top: 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1.2px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#Product_details .details button:hover {
+    background-color: #66BB6A;
+    transform: scale(1.1);
+}
+
+#Product_details .details span {
+    line-height: 25px;
+    font-size: 0.8rem;
+}
+
+#New_arrival_product {
+    text-align: center;
+    padding-top: 60px;
+}
+
+#New_arrival_product h2 {
+    padding-top: 50px;
+    font-size: 2.5rem;
+}
+
+#New_arrival_product p {
+    padding-top: 5px;
+    font-size: 0.7rem;
+    padding-right: 12px;
+    color: #636262;
+}
+
+#New_arrival_product .New_arrival_container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+#New_arrival_product .product1 {
+    width: 23%;
+    min-width: 250px;
+    margin: 50px 20px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+#New_arrival_product .product1:hover {
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.2);
+}
+
+#New_arrival_product .product1 img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#New_arrival_product .product1 .description {
+    text-align: start;
+    padding: 10px 5px;
+}
+
+#New_arrival_product .product1 .description span {
+    color: #636262;
+    font-size: 0.7rem;
+}
+
+#New_arrival_product .product1 .description h5 {
+    padding-top: 2px;
+    font-size: 0.95rem;
+}
+
+#New_arrival_product .product1 .description i {
+    font-size: 0.7rem;
+    color: rgb(225, 225, 16);
+}
+
+#New_arrival_product .product1 .description h4 {
+    padding-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+#New_arrival_product .product1 .cart {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #6dc86f;
+    border-radius: 50px;
+    color: black;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+#New_arrival_product .product1 .cart:hover {
+    background-color: rgb(22, 158, 69);
+    color: rgb(233, 226, 226);
+}
+
+
+/* Shopping cart */
+
+.cart_page {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 65px 20px 40px;
+    z-index: 100;
+    overflow: auto;
+    transition: 0.6s;
+}
+
+.cart_page.active {
+    right: 0;
+}
+
+.cart_title {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+}
+
+.cart_box {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cart_box img {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart_details {
+    display: grid;
+    gap: 8px;
+    margin-right: auto;
+}
+
+.cart_product {
+    font-size: 0.9rem;
+    line-height: 1;
+    margin-left: 15px;
+}
+
+.cart_price {
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-left: 15px;
+}
+
+.cart_remove {
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 1px solid #333;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.total_price {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.total_title {
+    margin-top: 10px;
+}
+
+.button {
+    display: block;
+    padding: 10px 30px;
+    background: #66BB6A;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: white;
+    margin: 20px auto 0;
+    cursor: pointer;
+}
+
+#cart_close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+/* Footer */
+
+.col1 img {
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    background-color:  #b9e7bb;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.col1 p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.col2 .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.col2 a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.col2 a:hover {
+    color: #0d9e14
+}
+
+.col3 .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.col3 a i {
+    color: black;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.col3 a i:hover {
+    color: #0d9e14;
+}
